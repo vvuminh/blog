@@ -1,0 +1,14 @@
+<!-- <mat-form-field>
+  <input matInput placeholder="Url of profile picture" [(ngModel)]="image">
+</mat-form-field><br> -->
+<mat-form-field>
+  <textarea matInput placeholder="image Url" [(ngModel)]="image"> </textarea>
+</mat-form-field><br>
+<mat-form-field>
+  <textarea matInput placeholder="bio" rows="10" [(ngModel)]="bio"> </textarea>
+</mat-form-field><br>
+<mat-form-field>
+  <textarea matInput placeholder="email" rows="10" [(ngModel)]="email"> </textarea>
+</mat-form-field><br>
+
+<button (click)= update();>Update Setting</button>

@@ -1,0 +1,22 @@
+<mat-tab-group>
+  <mat-tab label="Your Feed">
+    <a *ngFor="let item of yourlists" >
+      <!-- <button (click)=profile(item);>{{item.author}}</button> -->
+      <a [routerLink]="['/profile' , item.author]">{{item.author}}</a>
+       <h1 >{{ item.title }}</h1>
+       <p>{{ item.description }}</p>
+       <span  [routerLink]="['/article' , item.slug]" >Read more...</span>
+       <button (click)=favoritearticle(item); [ngStyle]="{'color':item.favorited ? 'red' : 'black' }">Favorite Article</button> <p [ngModel]>{{item.favoritesCount}}</p>
+   </a>
+  </mat-tab>
+  <mat-tab label="Global Feed">
+    <a *ngFor="let item of lists" >
+       <!-- <button (click)=profile(item);>{{item.author}}</button> -->
+       <a [routerLink]="['/profile' , item.author]">{{item.author}}</a>
+        <h1 >{{ item.title }}</h1>
+        <p>{{ item.description }}</p>
+        <span  [routerLink]="['/article' , item.slug]" >Read more...</span>
+        <button (click)=favoritearticle(item); [ngStyle]="{'color':item.favorited ? 'red' : 'black' }">Favorite Article</button> <p [ngModel]>{{item.favoritesCount}}</p>
+    </a>
+  </mat-tab>
+</mat-tab-group>

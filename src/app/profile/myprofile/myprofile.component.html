@@ -1,0 +1,32 @@
+<!-- <h1>{{author}}</h1>
+<button [routerLink]="['/seting']">Edit Profile setting</button>
+<mat-tab-group>
+    <mat-tab label="My Article">
+        <a *ngFor="let list of lists" [routerLink]="['/article' , list.slug]">
+            <h1 >{{ list.title }}</h1>
+            <p>{{ list.description }}</p>
+            <span  >Read more...</span>
+        </a>
+      </mat-tab>
+    <mat-tab label="Favorite Article">{{author}}</mat-tab>
+</mat-tab-group> -->
+<h2 *ngIf = check>{{user}}</h2>
+<h2 *ngIf = !check>{{author}}</h2>
+<button *ngIf = check [routerLink]="['/seting']">Edit Profile setting</button>
+<button *ngIf = "!check && !following" (click) = follow();>Follow</button> <button *ngIf = "!check && following"  (click) = unfollow();>UnFollow</button>
+<mat-tab-group>
+    <mat-tab label="My Article">
+        <a *ngFor="let list of lists" [routerLink]="['/article' , list.slug]">
+            <h1 >{{ list.title }}</h1>
+            <p>{{ list.description }}</p>
+            <span  >Read more...</span>
+        </a>
+      </mat-tab>
+    <mat-tab label="Favorite Article">
+        <a *ngFor="let item of favorite">
+            <h1 >{{ item.title }}</h1>
+            <p>{{ item.description }}</p>
+            <span  >Read more...</span>
+        </a>
+    </mat-tab>
+</mat-tab-group>

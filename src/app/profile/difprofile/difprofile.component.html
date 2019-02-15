@@ -1,0 +1,12 @@
+<h1>{{author}}</h1>
+<button (click)=follow();>Follow {{author}}</button>
+<mat-tab-group>
+    <mat-tab label="My Article">
+        <a *ngFor="let list of lists" [routerLink]="['/article' , list.slug]">
+            <h1 >{{ list.title }}</h1>
+            <p>{{ list.description }}</p>
+            <span  >Read more...</span>
+        </a>
+      </mat-tab>
+    <mat-tab label="Favorite Article">{{author}}</mat-tab>
+</mat-tab-group>

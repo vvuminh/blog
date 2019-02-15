@@ -1,0 +1,15 @@
+<div>
+  <h2>{{title}}</h2><br>
+  <p> {{author}} <button *ngIf = user >follow</button> <button *ngIf = user >Unfollow</button>
+  <button *ngIf = !user (click) = editprofile(); >Editseting</button> </p>
+  <p><button *ngIf = '!favorited' (click)=favoritearticle();>Favorite Article</button> <button *ngIf = 'favorited' (click)=unfavorite();>Unfavorite</button> {{favoriteCount}} </p>
+  <p>newpost</p>
+  <p>--------------------------------------------</p>
+<form ngNoForm (ngSubmit)="onSubmit()">
+    <input placeholder="Write Command" [(ngModel)]="newCommand">
+    <button (click)= postcm();>Post Command</button>
+ </form>
+  <p>{{description}}</p>
+  <button (click)=delete(); *ngIf = check>delete</button>
+  <button (click)=edit(); *ngIf = check>edit</button>
+</div>

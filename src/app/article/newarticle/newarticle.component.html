@@ -1,0 +1,40 @@
+<h1>newarticle</h1>
+<mat-form-field>
+    <input matInput placeholder="Post Title" [(ngModel)]="title">
+  </mat-form-field><br>
+  <mat-form-field>
+    <textarea matInput placeholder="Description" rows="10" [(ngModel)]="description"> </textarea>
+  </mat-form-field><br>
+  <mat-form-field>
+    <textarea matInput placeholder="body" rows="10" [(ngModel)]="body"> </textarea>
+  </mat-form-field><br>
+
+<button (click)= publish(); *ngIf = !check>Publish Article</button>
+<button (click)= update(); *ngIf = check>Update Article</button>
+
+<!-- <section>
+    <mat-accordion>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            Create a Post
+          </mat-panel-title>  
+        </mat-expansion-panel-header>
+  
+        <div>
+          <input type="file" name="file" id="file" (change)="uploadImage($event)">
+          <mat-progress-bar mode="determinate" value="40"></mat-progress-bar>
+        </div>
+        <br>
+        <mat-form-field>
+          <input matInput placeholder="Post Title">
+        </mat-form-field>
+        <br>
+        <mat-form-field>
+          <textarea matInput placeholder="Post content" rows="10"> </textarea>
+        </mat-form-field>
+        <br>
+        <button mat-raised-button color="accent" (click)="createPost"> createPost </button>
+      </mat-expansion-panel>
+    </mat-accordion>
+</section> -->

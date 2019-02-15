@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+</head>
+
+<body>
+    <!-- <div> -->
+    <!-- <ng-container *ngIf="dieukien; then loggedIn; else loggedOut">
+        </ng-container>
+
+        <ng-template #loggedIn>
+            <div appNotlogin id="top-bar" *ngIf="dieukien" >
+                <div class="topnav socialmedia" id="myTopnav">
+                    <button (click)="home();" id="myTopnav">Home</button>
+                    <button (click)="singin();" id="myTopnav">Singin</button>
+                    <button (click)="singup();" id="myTopnav">Singup</button>
+                </div>
+            </div>
+        </ng-template>
+        <ng-template #loggedOut>
+            <div appIslogined id="top-bar" *ngIf="!dieukien">
+                <div class="topnav socialmedia" id="myTopnav">
+                    <button (click)="home();" id="myTopnav">Home</button>
+                    <button (click)="newarticle();" id="myTopnav">Newarticle</button>
+                    <button (click)="setting();" id="myTopnav">Setting</button>
+                    <button (click)="profile();" id="myTopnav">{{user}}</button>
+                    <button (click)="logout();" id="myTopnav">Logout</button>
+                </div>
+            </div>
+        </ng-template>
+    </div> -->
+    <div>
+
+        <div appNotlogin id="top-bar">
+            <div class="topnav socialmedia" id="myTopnav">
+                    <!-- <a href="https://accounts.google.com/o/oauth2/auth?scope=email&redirect_uri=http://localhost:4200/singin&response_type=code
+                    &client_id=595859068135-ipi48mfmbbbp4hdcevciqr26kdoh9p5c.apps.googleusercontent.com&approval_prompt=force">Login With Google</a> -->
+                <button (click)="home();" id="myTopnav">Home</button>
+                <button (click)="singin();" id="myTopnav">Singin</button>
+                <button (click)="singup();" id="myTopnav">Singup</button>
+            </div>
+        </div>
+
+        <div appIslogined id="top-bar">
+            <div class="topnav socialmedia" id="myTopnav">
+                <!-- <button (click)="GETParam();" id="myTopnav">GETPARAMS</button> -->
+                <button (click)="home();" id="myTopnav">Home</button>
+                <button (click)="newarticle();" id="myTopnav">Newarticle</button>
+                <button (click)="setting();" id="myTopnav">Setting</button>
+                <button (click)="profile();" id="myTopnav">{{user}}</button>
+                <button (click)="logout();" id="myTopnav">Logout</button>
+            </div>
+        </div>
+    </div>
+
+</body>
